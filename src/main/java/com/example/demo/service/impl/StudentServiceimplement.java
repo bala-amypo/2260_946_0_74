@@ -13,12 +13,12 @@ public class StudentServiceimplement implements StudentService{
     StudentRepository repo;
 
     @Override
-
     public Student createData(Student stu){
         return repo.save(stu);
     }
+
     @Override
-    public List<Student> fetchRecord(Student stu){
+    public List<Student> fetchRecord(){
         return repo.findAll();
     }
 
