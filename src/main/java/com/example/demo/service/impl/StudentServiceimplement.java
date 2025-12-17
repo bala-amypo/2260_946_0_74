@@ -1,5 +1,5 @@
 package com.example.demo.service.impl;
-import java.util.*;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,4 +8,17 @@ import com.example.demo.repository.StudentRepository;
 import com.example.demo.service.StudentService;
 
 @Service
-public class Serviceimplement implement
+public class Serviceimplement implements StudentService{
+    @Autowired
+    StudentRepository repo;
+
+    @Override
+
+    public Student createData(Student stu){
+        return repo.save(stu);
+    }
+    public List<Student> fetchRecord(Student stu){
+        return repo.findAll();
+    }
+
+}
