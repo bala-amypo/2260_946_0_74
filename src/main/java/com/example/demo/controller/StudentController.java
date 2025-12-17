@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.entity.Student;
 import com.example.demo.service.StudentService;
 
-import java.util.List;
+import java.util.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -31,7 +31,7 @@ public class StudentController {
     }
     @GetMapping("/fetchdatabyid/{id}")
     public Optional<Student> fetchDataById(@PathVariable int id){
-    return ser.fetchDataById(id);
+    return ser.getStudent(id);
     }
 }
 
