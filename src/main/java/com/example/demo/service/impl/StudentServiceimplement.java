@@ -8,7 +8,7 @@ import com.example.demo.repository.StudentRepository;
 import com.example.demo.service.StudentService;
 
 @Service
-public class Serviceimplement implements StudentService{
+public class StudentServiceimplement implements StudentService{
     @Autowired
     StudentRepository repo;
 
@@ -17,6 +17,7 @@ public class Serviceimplement implements StudentService{
     public Student createData(Student stu){
         return repo.save(stu);
     }
+    @Override
     public List<Student> fetchRecord(Student stu){
         return repo.findAll();
     }
