@@ -23,7 +23,7 @@ public class StudentServiceimplement implements StudentService{
     }
     @Override
     public Optional<Student> getStudent(int id){
-        return.repo.findById(id);
+        return repo.findById(id);
     }
 
 }

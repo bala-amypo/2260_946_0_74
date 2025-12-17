@@ -8,6 +8,6 @@ import com.example.demo.repository.StudentRepository;
 public interface StudentService{
     public Student createData(Student stu);
     public List<Student> fetchRecord();
-    public
+    public Optional<Student> getStudent(int id);
     
 }
